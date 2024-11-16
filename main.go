@@ -47,6 +47,7 @@ func formHandler(w http.ResponseWriter, r *http.Request) {
 	address := r.FormValue("address")
 
 	fmt.Fprintf(w, "Form name=%s address=%s", name, address)
+	fmt.Printf("Form name=%s address=%s \n", name, address)
 }
 
 func routeErrorHandling(w http.ResponseWriter, r *http.Request, allowedMethods []string, expectedPath string) error {
